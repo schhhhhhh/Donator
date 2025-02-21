@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BLK Design System Angular</title>
+    <style>
+        body {
+            background-color: white;
+            margin: 0;
+            overflow: hidden;
+        }
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 10px 20px;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+        .animated-image {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            animation: moveAround 10s infinite alternate;
+        }
+        @keyframes moveAround {
+            0% { transform: translate(10%, 10%); }
+            100% { transform: translate(80%, 80%); }
+        }
+        .content {
+            text-align: center;
+            padding-top: 150px;
+        }
+        .button-group {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <span>BLK Design System Angular</span>
+        <div class="nav-links">
+            <a href="#">Accueil</a>
+            <a href="#">Documentation</a>
+            <a href="#">Contact</a>
+            <button class="btn btn-primary">Télécharger</button>
+        </div>
+    </nav>
+    <img src="assets/images/stethoscope.png" class="animated-image" style="top: 20%; left: 10%;">
+    <img src="assets/images/syringe.png" class="animated-image" style="top: 50%; left: 50%;">
+    <img src="assets/images/pill.png" class="animated-image" style="top: 70%; left: 20%;">
+    <div class="content">
+        <h1>BLK &bull;</h1>
+        <p>Un beau système de design pour Bootstrap 4 et Angular. C'est gratuit et open-source.</p>
+        <div class="button-group">
+            <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#modalForm"><i class="bi bi-android"></i> Android</button>
+            <button class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#modalForm"><i class="bi bi-apple"></i> iOS</button>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="modalForm" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalLabel">Inscription</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Nom</label>
+                            <input type="text" class="form-control" id="name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Envoyer</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
+
+
+
+<router-outlet />

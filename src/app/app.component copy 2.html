@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BLK Design System Angular</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: white;
+            margin: 0;
+            overflow: hidden;
+        }
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 10px 20px;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+        .animated-image {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            animation: moveAround 10s infinite alternate;
+        }
+        @keyframes moveAround {
+            0% { transform: translate(10%, 10%); }
+            100% { transform: translate(80%, 80%); }
+        }
+        .content {
+            text-align: center;
+            padding-top: 100px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <span>BLK Design System Angular</span>
+        <div class="nav-links">
+            <a href="#">Accueil</a>
+            <a href="#">Documentation</a>
+            <a href="#">Contact</a>
+            <button class="btn btn-primary">Télécharger</button>
+        </div>
+    </nav>
+    <img src="https://via.placeholder.com/100" class="animated-image" style="top: 20%; left: 10%;">
+    <img src="https://via.placeholder.com/100" class="animated-image" style="top: 50%; left: 50%;">
+    <img src="https://via.placeholder.com/100" class="animated-image" style="top: 70%; left: 20%;">
+    <div class="content">
+        <h1>BLK &bull;</h1>
+        <p>Un beau système de design pour Bootstrap 4 et Angular. C'est gratuit et open-source.</p>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+<router-outlet />
