@@ -107,33 +107,6 @@
       text-align: left;
       /* Pour que les éléments à l'intérieur du corps du modal ne soient pas centrés */
     }
-
-    .dynamic-text {
-            color: red;
-            display: inline-block;
-            overflow: hidden;
-            white-space: nowrap;
-            position: relative;
-        }
-        .dynamic-text span {
-            display: inline-block;
-            position: relative;
-            animation: slide-in 2s ease-in-out infinite;
-        }
-
-        @keyframes slide-in {
-            0% {
-                transform: translateX(-100%);
-                opacity: 0;
-            }
-            50% {
-                opacity: 1;
-            }
-            100% {
-                transform: translateX(0);
-                opacity: 1;
-            }
-        }
   </style>
 </head>
 
@@ -203,8 +176,7 @@
     <!-- Contenu principal avec le texte -->
     <div class="hero-content">
       <h1>Connecting Lives, One Donation at a Time</h1>
-      <!-- <h1>Find O+ donor</h1> -->
-      <h1>Find <span class="dynamic-text"><span id="blood-group">O+ donor</span></span></h1>
+      <h1>Find O+ donor</h1>
       <div class="button-group">
         <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#modalForm"><i class="bi bi-android"></i>
           Android</button>
